@@ -66,7 +66,7 @@ git commit -m "first commit"
 git remote add origin https://github.com/LeeSeongJinCa/ReCasino.git
 git push -u origin master
 */
-
+ 
 selectSnail.forEach((el, i) => {
     el.addEventListener("click", () => {
         if (confirm(`${i + 1}번 달팽이를 고르셨습니다.\n시작하시겠습니까?`)) {
