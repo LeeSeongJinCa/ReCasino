@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>login</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/login.css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.js"></script>
+</head>
+<body>
+    <div id="_login">
+        <div id="login">
+            <div>
+                <div id="login_title">Login</div>
+            </div>
+            <div>
+                <input class="login_input" id="login_id" type="text">
+            </div>
+            <div>
+                <input class="login_input" id="login_pw" type="password">
+            </div>
+            <div class="error">
+                <p>가입하지 않은 아이디이거나, 잘못된 비밀번호입니다.</p>
+            </div>
+            <div>
+                <button id="login_button" onclick="login();">Login</button>
+            </div>
+        </div>
+    </div>
+    <script src="js/common.js"></script>
+    <script src="js/login.js"></script>
+</body>
+</html>

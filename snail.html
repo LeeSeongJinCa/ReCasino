@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Snail Game</title>
+    <link rel="stylesheet" href="css/snail.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.js"></script>
+</head>
+<body>
+    <div id="_snail">
+        <main id="main">
+            <div>
+                <div id="track">
+                    <div class="snail_track">
+                        <div class="snail_track_start snail_track_SF"></div>
+                        <img class="snail" src="img/snail1.png" alt="snail">
+                        <div class="snail_track_finish snail_track_SF"></div>
+                    </div>
+                    <div class="snail_track">
+                        <div class="snail_track_start snail_track_SF"></div>
+                        <img class="snail" src="img/snail2.png" alt="snail">
+                        <div class="snail_track_finish snail_track_SF"></div>
+                    </div>
+                    <div class="snail_track">
+                        <div class="snail_track_start snail_track_SF"></div>
+                        <img class="snail" src="img/snail3.png" alt="snail">
+                        <div class="snail_track_finish snail_track_SF"></div>
+                    </div>
+                </div>
+                <div id="info_game">
+                    <div id="select">
+                        <div class="select_snail">
+                            <p>1</p>
+                        </div>
+                        <div class="select_snail">
+                            <p>2</p>
+                        </div>
+                        <div class="select_snail">
+                            <p>3</p>
+                        </div>
+                    </div>
+                    <div id="betting">
+                        <div id="user_betting">
+                            <input type="text" onkeypress="onlyNumber();" placeholder="베팅하실 금액을 입력하세요.(숫자만)">
+                        </div>
+                        <div id="view_betting">
+                            <p>
+                                <span>아이디</span>
+                                <span>색깔</span>
+                                <span>배팅금</span>
+                            </p>
+                            <div id="view_data"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </main>
+    </div>
+    <script src="js/common.js"></script>
+    <script src="js/login.js"></script>
+    <script src="js/snail.js"></script>
+</body>
+</html>

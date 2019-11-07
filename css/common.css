@@ -1,0 +1,34 @@
+#header_wrapper {
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+    padding: 0 50px;
+    line-height: 60px;
+    border-bottom: 1px solid #9e9e9e;
+}
+#logo {
+    display: flex;
+    justify-content: center;
+}
+#logo_image {
+    width: 70px;
+    align-self: center;
+    cursor: pointer;
+}
+.log_wrapper {
+    width: 200px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.log_button {
+    margin-left: 10px;
+    border: 1px solid #9e9e9e;
+    border-radius: 5px;
+    padding: 5px 10px;
+    outline: none;
+    font-size: 18px;
+    color: #9e9e9e;
+    background-color: #ffffff;
+    cursor: pointer;
+}

@@ -1,0 +1,117 @@
+#_snail {
+    width: 1320px;
+    margin: 0 auto;
+}
+#main {
+    border: 1px solid red;
+    width: inherit;
+}
+#main > div {
+    width: inherit;
+    display: flex;
+}
+#track {
+    margin-top: 50px;
+}
+.snail_track {
+    width: 1000px;
+    position: relative;
+    height: 120px;
+    line-height: 120px;
+    background-color: #ed795c;
+    border: 5px solid #cecece;
+    border-right: 0;
+    border-left: 0;
+}
+.snail_track:first-child {
+    border-top: 0;
+}
+.snail_track:last-child {
+    border-bottom: 0;
+}
+.snail_track > img {
+    width: 70px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 930px;
+    transition: 1000ms;
+    z-index: 1;
+}
+.snail_track_SF {
+    position: absolute;
+    width: 70px;
+    height: 120px;
+    line-height: 70px;
+}
+.snail_track_start {
+    left: 0;
+    top: 0;
+    text-align: center;
+    background-color: #c04b2e;
+}
+.snail_track_finish {
+    right: 0;
+    top: 0;
+    text-align: center;
+    background-color: #c04b2e;
+}
+#info_game {
+    width: 100%;
+    border: 1px solid red;
+}
+#select {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+.select_snail {
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    padding: 5px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+#betting {
+    margin-top: 50px;
+}
+#user_betting > input {
+    display: block;
+    width: 70%;
+    margin: 0 auto;
+    padding: 5px 10px;
+    border: 1px solid rgb(177, 115, 115);
+    outline: none;
+}
+#view_betting {
+    margin-top: 50px;
+}
+#view_betting > p {
+    border-bottom: 1px solid rgb(119, 119, 119);
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+}
+#view_data {
+    overflow-y: scroll;
+    min-height: 179px;
+}
+#view_data > p {
+    margin-top: 10px;
+}
+#view_betting p > span, #view_data p > span {
+    text-align: center;
+    display: inline-block;
+}
+#view_betting p > span:first-child, #view_data p > span:first-child {
+    width: 90px;
+}
+#view_betting p > span:nth-child(2), #view_data p > span:nth-child(2) {
+    width: 90px;
+}
+#view_betting p > span:last-child, #view_data p > span:last-child {
+    width: 100px;
+}
