@@ -19,7 +19,7 @@
 }
 #result_race > p {
     background: linear-gradient(to right, #f00, #00f);
-    -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 .snail_track {
