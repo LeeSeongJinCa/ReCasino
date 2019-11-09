@@ -2,16 +2,25 @@
     width: 1320px;
     margin: 0 auto;
 }
-#main {
-    border: 1px solid red;
+#main { 
     width: inherit;
 }
 #main > div {
     width: inherit;
     display: flex;
 }
-#track {
-    margin-top: 50px;
+#result_race {
+    text-align: center;
+    height: 100px;
+    line-height: 100px;
+    font-size: 30px;
+    letter-spacing: 15px;
+    font-weight: bold; 
+}
+#result_race > p {
+    background: linear-gradient(to right, #f00, #00f);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 .snail_track {
     width: 1000px;
@@ -23,10 +32,10 @@
     border-right: 0;
     border-left: 0;
 }
-.snail_track:first-child {
+.snail_track:nth-child(2) {
     border-top: 0;
 }
-.snail_track:last-child {
+.snail_track:nth-child(4) {
     border-bottom: 0;
 }
 .snail_track > img {
@@ -57,8 +66,7 @@
     background-color: #c04b2e;
 }
 #info_game {
-    width: 100%;
-    border: 1px solid red;
+    width: 100%; 
 }
 #select {
     display: flex;
@@ -68,13 +76,30 @@
     margin-top: 50px;
 }
 .select_snail {
-    font-size: 30px;
-    width: 50px;
+    font-size: 18px;
     text-align: center;
-    padding: 5px 15px;
     cursor: pointer;
     border-radius: 5px;
-    border: 1px solid black;
+    border: 2px solid #f0f0f0;
+}
+.select_snail > button {
+    padding: 20px 10px;
+    user-select: none;
+    outline: none;
+    border: 0;
+    background-color: #fff;
+}
+.select_snail_selected:nth-child(1) > button {
+    background-color: #d41010;
+    color: #ffffff;
+}
+.select_snail_selected:nth-child(2) > button {
+    background-color: #08ce08;
+    color: #ffffff;
+}
+.select_snail_selected:nth-child(3) > button {
+    background-color: #0e0ed4;
+    color: #ffffff;
 }
 #betting {
     margin-top: 50px;
@@ -91,7 +116,8 @@
     margin-top: 50px;
 }
 #view_betting > p {
-    border-bottom: 1px solid rgb(119, 119, 119);
+    font-weight: bold;
+    border-bottom: 1px solid #777777;
     margin-bottom: 5px;
     padding-bottom: 5px;
 }
@@ -99,19 +125,50 @@
     overflow-y: scroll;
     min-height: 179px;
 }
-#view_data > p {
-    margin-top: 10px;
+#view_data > li {
+    margin-top: 20px;
 }
-#view_betting p > span, #view_data p > span {
+#view_ranking > p {
+    display: flex;
+    justify-content: space-around;
+    font-weight: bold;
+    border-bottom: 1px solid #777777;
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+}
+#view_rank > li {
+    padding: 5px 0;
+    display: flex;
+    justify-content: space-around;
+    font-size: 16px;
+    height: 20px;
+    line-height: 20px;
+}
+#view_rank > li:nth-child(2n) {
+    background-color: #f4f4f4;
+}
+#view_rank > li > span:first-child {
+    display: inline-block;
+    width: 40px;
+}
+#view_rank > li > span:last-child {
+    display: inline-block;
+    width: 30px;
+}
+#view_betting p > span,
+#view_data li > span {
     text-align: center;
     display: inline-block;
 }
-#view_betting p > span:first-child, #view_data p > span:first-child {
+#view_betting p > span:first-child, 
+#view_data li > span:first-child {
     width: 90px;
 }
-#view_betting p > span:nth-child(2), #view_data p > span:nth-child(2) {
+#view_betting p > span:nth-child(2), 
+#view_data li > span:nth-child(2) {
     width: 90px;
 }
-#view_betting p > span:last-child, #view_data p > span:last-child {
+#view_betting p > span:last-child, 
+#view_data li > span:last-child {
     width: 100px;
 }

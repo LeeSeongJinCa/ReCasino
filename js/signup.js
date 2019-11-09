@@ -16,7 +16,7 @@ function signup() {
     }
     axios({
         method: "POST",
-        url: server + '/account/register',
+        url: server + ':5000/account/register',
         data: {
             "id": id.value.trimEnd(),
             "pw": pw.value.trimEnd(),
