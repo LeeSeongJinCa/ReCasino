@@ -3,15 +3,18 @@
     justify-content: space-between;
     height: 60px;
     padding: 0 50px;
-    line-height: 60px;
     border-bottom: 1px solid #9e9e9e;
 }
 #logo {
     display: flex;
     justify-content: center;
 }
+#logo > a {
+    display: inline-block;
+    align-self: center;
+}
 #logo_image {
-    width: 70px;
+    width: 90px;
     align-self: center;
     cursor: pointer;
 }
@@ -23,12 +26,17 @@
 }
 .log_button {
     margin-left: 10px;
+    padding: 0;
     border: 1px solid #9e9e9e;
     border-radius: 5px;
-    padding: 5px 10px;
     outline: none;
-    font-size: 18px;
-    color: #9e9e9e;
     background-color: #ffffff;
     cursor: pointer;
+}
+.log_button > a {
+    display: inline-block;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: #9e9e9e;
+    font-size: 18px;
 }

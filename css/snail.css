@@ -19,7 +19,7 @@
 }
 #result_race > p {
     background: linear-gradient(to right, #f00, #00f);
-    background-clip: text;
+    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 .snail_track {
@@ -83,11 +83,12 @@
     border: 2px solid #f0f0f0;
 }
 .select_snail > button {
-    padding: 20px 10px;
+    padding: 15px 25px;
     user-select: none;
     outline: none;
     border: 0;
     background-color: #fff;
+    cursor: pointer;
 }
 .select_snail_selected:nth-child(1) > button {
     background-color: #d41010;
@@ -102,7 +103,7 @@
     color: #ffffff;
 }
 #betting {
-    margin-top: 50px;
+    margin-top: 20px;
 }
 #user_betting > input {
     display: block;
@@ -112,8 +113,12 @@
     border: 1px solid rgb(177, 115, 115);
     outline: none;
 }
+#view_cash {
+    margin-top: 20px;
+    text-align: center;
+}
 #view_betting {
-    margin-top: 50px;
+    margin-top: 20px;
 }
 #view_betting > p {
     font-weight: bold;
@@ -160,15 +165,15 @@
     text-align: center;
     display: inline-block;
 }
-#view_betting p > span:first-child, 
+#view_betting p > span:first-child,
 #view_data li > span:first-child {
     width: 90px;
 }
-#view_betting p > span:nth-child(2), 
+#view_betting p > span:nth-child(2),
 #view_data li > span:nth-child(2) {
     width: 90px;
 }
-#view_betting p > span:last-child, 
+#view_betting p > span:last-child,
 #view_data li > span:last-child {
     width: 100px;
 }

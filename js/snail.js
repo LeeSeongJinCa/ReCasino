@@ -69,7 +69,7 @@ function getUserCash() {
 }
 
 function setUserCash(cash) {
-    document.querySelector("#view_cash").innerHTML = numberWithCommas(cash);
+    document.querySelector("#view_cash").innerHTML = `보유 잔액: ${numberWithCommas(cash)}`;
 }
 
 function viewRestTime() {
@@ -116,13 +116,14 @@ function getRank() {
         .then(datas => {
             let data = datas.data;
             let rank = document.querySelector("#view_rank");
+            rank.innerHTML = "";
             Object.keys(data).map(key => Object.keys(data[key]).map(user => {
                 let li = `<li>
                         <span>${user}</span>
                         <span>${data[key][user]}</span>
                     </li>`
                 rank.insertAdjacentHTML("beforeend", li);
-            })
+                })
             );
         })
         .catch(error => {
@@ -136,24 +137,24 @@ function getToken() {
 
 selectSnail.forEach(el => {
     el.addEventListener("click", () => {
-        if (bettingInput.value.trim() == "") {
-            return alert("배팅금을 입력하세요.");
-        }
-        if (parseInt(bettingInput.value.trim()) < 0) {
-            return alert("배팅금은 0원 이상입니다.");
-        }
         if (UIsLogin()) {
+            if (bettingInput.value.trim() == "" || parseInt(bettingInput.value.trim()) < 0) {
+                alert("베팅금은 0원 이상입니다.");
+                return;
+            }
             selectSnail.forEach(el => el.classList.remove("select_snail_selected"));
             el.classList.add("select_snail_selected");
-            snailGameStart(el.childNodes[1].innerHTML[0]);
+            snailGameStart(el.childNodes[1].innerHTML[0].toLowerCase());
         } else {
             alert("로그인을 해주세요.");
+            return;
         }
     });
 });
 
 window.onload = () => {
     UIsLogin();
+    getRank();
     dalpange = io.connect("http://10.156.147.139:5555");
     dalpange.emit("showdata");
 
@@ -173,6 +174,7 @@ window.onload = () => {
         viewData.innerHTML = "";
         selectSnail.forEach(el => el.classList.remove("select_snail_selected"));
         getUserCash();
+        getRank();
         whoIsWin(datas);
         setTimeout(() => {
             readySnail();
